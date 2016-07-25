@@ -15,17 +15,7 @@ app.get('/search', function(req, res) {
     access_token_secret: "nALnoZ4dYrOknCZHwByh54TC1uH2T0b8jXuDxd8KAnABC"
   })
 
-//   var sanFrancisco = [ '-122.75', '36.8', '-121.75', '37.8' ]
-
-//   var stream = T.stream('statuses/filter', { locations: sanFrancisco })
-
-//   stream.on('tweet', function (err, tweet) {
-//     res.send(tweet)
-//   })
-// })
-
-  T.get( 'search/tweets', { q: 'movie filter:images', geocode: "55.9486,-3.1999,200mi", count: 100 }, function(err, data, response) {
-    // console.log(data);
+  T.get( 'search/tweets', { q: 'filter:images', geocode: "55.9486,-3.1999,1mi", count: 100 }, function(err, data, response) {
     res.send(data)
   })
 })
